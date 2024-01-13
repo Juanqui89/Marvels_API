@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+}
+body{
+  background: #271F30;
+}
+section.slider{
+  margin-bottom: 20px;
+}
+section.slider img{
+  width: 100%;
+  height: 400px;
+}
+h1.title{
+  text-align: center;
+  color: #fff;
+}
+section.characters{
+  text-align: center;
+  margin-bottom: 30px;
+  display: grid;
+}
+div.card:hover{
+  background: #d50000;
+  color: #fff;
+}
+div.card:hover article.toggle-btn{
+  background: #240b36;
+}
+div.card img{
+  object-fit: cover;
+}
+div.card-title.h5{
+  text-align: center;
+  font-weight: 500;
+}
+div.card-body{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+div.card-footer{
+  margin-top: auto;
+}
+button.toggle-btn{
+  width: 90px;
+  height: 30px;
+  background: #240b36;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+button.toggle-btn:hover{
+  background: #d50000;
+}
+div.card:hover button.toggle-btn:hover{
+  background: #271F30;
+}
+button.toggle-btn:focus{
+  outline: none;
+}
+article li{
+  list-style: none;
+}
+footer{
+  background: #222;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: auto;
+  margin: 0 auto;
+}
+footer p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  font-weight: 500;
+}
+footer button {
+  background: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 5px;
+}
+footer button a {
+  text-decoration: none;
+  color: #240b36;
+}
+footer button:hover {
+  background: #d50000;
+}
+footer button:focus {
+  outline: none;
+}
+button.upbtn {
+  position: absolute;
+  border: none;
+  background: none;
+  position: fixed;
+  top: 93.2%;
+  left: 88%;
+}
+button.upbtn:hover {
+  background: none;
+  padding: 0;
+}
+i.bi.bi-arrow-up-circle-fill.fs-4.arrow{
+  background: #fff;
+  border-radius: 50%;
+  color: #fff;
+  background: none;
+}
+div.card-footer{
+  border: none;
+  background: none;
+}
