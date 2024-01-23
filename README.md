@@ -1,30 +1,11 @@
-# React + TypeScript + Vite
+Bienvenido a MarvelExplorer, un proyecto web que utiliza HTML, CSS, JavaScript, Bootstrap y TypeScript para brindar una experiencia inmersiva de exploración en el vasto universo de personajes de Marvel a través del poderoso API de Marvel.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+La interfaz, diseñada con HTML y CSS junto con el framework Bootstrap, es atractiva y totalmente responsiva, adaptándose a diversos dispositivos y tamaños de pantalla. La aplicación permite a los usuarios sumergirse en la extensa base de datos de personajes de Marvel, donde pueden filtrar, buscar y descubrir detalles fascinantes acerca de sus héroes y villanos preferidos.
 
-Currently, two official plugins are available:
+La integración del API de Marvel no solo proporciona una amplia gama de información sobre cada personaje, sino que también permite una experiencia de usuario mejorada gracias a TypeScript. Esta implementación incluye autocompletado y validaciones que hacen la exploración aún más intuitiva.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+El dinamismo de JavaScript se utiliza para ofrecer una experiencia en tiempo real, permitiendo a los usuarios obtener información actualizada de la Marvel API sin necesidad de recargar la página. Esto garantiza una navegación fluida y sin interrupciones.
 
-## Expanding the ESLint configuration
+Para comenzar, simplemente clona el repositorio y sigue las instrucciones para instalar las dependencias. Configura tu clave de API de Marvel en el archivo correspondiente y prepárate para sumergirte en la vastedad del universo Marvel con MarvelExplorer.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+No solo te invitamos a disfrutar de la aplicación, sino también a contribuir, informar problemas o compartir tus sugerencias para hacer de MarvelExplorer una experiencia aún más enriquecedora para todos los fans. ¡Explora, disfruta y únete a la comunidad MarvelExplorer!
