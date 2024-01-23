@@ -39,25 +39,24 @@ const App = () => {
     setExpandedCardId((prevId) => (prevId === id ? null : id));
   };
 
-  
-    const fetchMarvelData = async () => {
-      try {
-        const response = await axios.get(
-          `https://gateway.marvel.com/v1/public/characters?ts=${timestamp}&apikey=${apiKey}&hash=${hash}`
-        );
-        console.log(response);
-        const result = response.data.data.results;
-        console.log(result);
-        if (!data.length) {
-          setData(result);
-        }
-      } catch (error) {
-        console.error("Error fetching data: ", error);
+  const fetchMarvelData = async () => {
+    try {
+      const response = await axios.get(
+        `https://gateway.marvel.com/v1/public/characters?ts=${timestamp}&apikey=${apiKey}&hash=${hash}`
+      );
+      console.log(response);
+      const result = response.data.data.results;
+      console.log(result);
+      if (!data.length) {
+        setData(result);
       }
-    };
-    useEffect(() => {
-      fetchMarvelData();
-    }, [apiKey, timestamp, hash, data.length]);
+    } catch (error) {
+      console.error("Error fetching data: ", error);
+    }
+  };
+  useEffect(() => {
+    fetchMarvelData();
+  }, [apiKey, timestamp, hash, data.length]);
 
   return (
     <>
@@ -74,20 +73,27 @@ const App = () => {
                       alt={item.name}
                     />
                     <Card.Body>
-                    <Card.Title>{item.name}</Card.Title>
+                      <Card.Title>{item.name}</Card.Title>
 
-                    {item.description && (
+                      {item.description && (
                         <Card.Text>
-                          {expandedCardId === item.id ? item.description : `${item.description.slice(0, 100)}...`}
+                          {expandedCardId === item.id
+                            ? item.description
+                            : `${item.description.slice(0, 100)}...`}
                         </Card.Text>
                       )}
 
                       {item.description && (
-                      <Card.Footer>
-                        <button className="toggle-btn" onClick={() => toggleText(item.id)}>
-                          {expandedCardId === item.id ? 'Ver menos' : 'Ver más'}
-                        </button>
-                      </Card.Footer>
+                        <Card.Footer>
+                          <button
+                            className="toggle-btn"
+                            onClick={() => toggleText(item.id)}
+                          >
+                            {expandedCardId === item.id
+                              ? "Ver menos"
+                              : "Ver más"}
+                          </button>
+                        </Card.Footer>
                       )}
                     </Card.Body>
                   </Card>
