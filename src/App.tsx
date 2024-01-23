@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
@@ -38,7 +39,7 @@ const App = () => {
     setExpandedCardId((prevId) => (prevId === id ? null : id));
   };
 
-  useEffect(() => {
+  
     const fetchMarvelData = async () => {
       try {
         const response = await axios.get(
@@ -54,9 +55,9 @@ const App = () => {
         console.error("Error fetching data: ", error);
       }
     };
-
-    fetchMarvelData();
-  }, [apiKey, timestamp, hash, data.length]);
+    useEffect(() => {
+      fetchMarvelData();
+    }, [apiKey, timestamp, hash, data.length]);
 
   return (
     <>
